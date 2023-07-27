@@ -1,0 +1,42 @@
+<p mat-dialog-title>Formulaire d'Ajout de Produit</p>
+<form [formGroup]="produitForm"  (ngSubmit)="addProduit()">
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Nom du Produit</mat-label>
+            <input matInput formControlName="nomProduit" placeholder="Nom">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Catégorie du Produit</mat-label>
+            <mat-select formControlName="categorie" placeholder="Catégorie">
+                <mat-option value="Repas">Repas</mat-option>
+                <mat-option value="Boisson">Boisson</mat-option>
+                <mat-option value="Fruit">Fruit</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choisir une date</mat-label>
+            <input formControlName="date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <label for="">
+            <h1>Etat du produit</h1>
+        </label>
+        <mat-radio-group class="example-radio-group" formControlName="etat" aria-label="Select an option">
+            <mat-radio-button class="example-radio-button" *ngFor="let etat of listEtatProduit" [value]="etat"> {{ etat }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field appearance="outline">
+            <mat-label>Prix du Produit</mat-label>
+            <input matInput formControlName="prix" type="number" placeholder="Prix">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Commentaires</mat-label>
+            <textarea matInput formControlName="commentaire"></textarea>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="secondary" mat-dialog-close>Annuler</button>
+        <button mat-raised-button color="primary"  [disabled]="!produitForm.valid"> {{libelleBtn}} </button>
+    </div>
+</form>

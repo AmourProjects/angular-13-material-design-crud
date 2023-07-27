@@ -1,0 +1,50 @@
+{
+  "listeProduits": [
+    {
+      "nomProduit": "Coca-cola",
+      "categorie": "Boisson",
+      "etat": "Tout neuf",
+      "prix": 450,
+      "commentaire": "Boisson qui ",
+      "date": "2022-06-06T23:00:00.000Z",
+      "id": 1
+    },
+    {
+      "nomProduit": "Banane",
+      "categorie": "Fruit",
+      "etat": "Deuxième main",
+      "prix": 2500,
+      "commentaire": "Banane ",
+      "date": "2022-06-06T23:00:00.000Z",
+      "id": 2
+    },
+    {
+      "nomProduit": "Qui ex iste sit eu q",
+      "categorie": "Fruit",
+      "etat": "Deuxième main",
+      "prix": 54,
+      "commentaire": "Enim sit et laudanti",
+      "date": "1995-07-25T23:00:00.000Z",
+      "id": 3
+    },
+    {
+      "nomProduit": "In odio sed nisi sit",
+      "categorie": "Repas",
+      "etat": "Deuxième main",
+      "prix": 100,
+      "commentaire": "Excepteur earum enim",
+      "date": "1980-04-16T23:00:00.000Z",
+      "id": 4
+    }
+  ],
+  "commentaire": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
